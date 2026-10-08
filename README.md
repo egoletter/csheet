@@ -10,10 +10,6 @@ A simple Go CLI tool that generates a _contact sheet_ (a thumbnail grid) from a 
 - Each frame is 480 px wide, with a 5 px margin.
 - Temporary files are cleaned up automatically.
 
-#### Example result:
-
-<img src="./example_result.jpg" alt="Example result" width="540" />
-
 ### Requirements
 
 - [Go](https://go.dev/dl/) 1.22 or newer.
@@ -40,6 +36,10 @@ Options:
 | --------- | -------------------------------------------- |
 | `--video` | Path to the source video file **(required)** |
 
+Example result:
+
+<img src="./example_result.jpg" alt="Example result" width="540" />
+
 ### Output
 
 The image is saved next to the video with a `.jpg` extension. `.mp4` and `.mkv` extensions are replaced with `.jpg`. For any other extension, `.jpg` is appended to the file name so the source file is never overwritten. An existing `.jpg` with the same name will be overwritten.
@@ -53,7 +53,7 @@ const (
 	frameWidth = 480 // width of each frame (px)
 	frameCount = 16  // number of frames to capture
 	sheetCols  = 4   // images per row (columns)
-	margin     = 5  // spacing between images (px)
+	margin     = 5   // spacing between images (px)
 )
 ```
 
